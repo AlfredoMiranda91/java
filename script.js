@@ -1,8 +1,13 @@
-let cantidadPeliculas = 0;
-const botonRegistro = document.getElementById("boton-registro");
-const cantidadElemento = document.getElementById("cantidad");
+// Algoritmo para armar tu valija para un viaje
+let valija = "";
+let item;
 
-botonRegistro.addEventListener("click", () => {
-  cantidadPeliculas++;
-  cantidadElemento.textContent = cantidadPeliculas.toString();
-});
+do {
+    item = prompt("Ingresa un item que quieras llevar a tu viaje - Escribi ESC cuando termines");
+    if (item != "ESC") {
+        valija = valija + item + "\n";
+    }
+} while (item != "ESC");
+
+console.log("En tu valija tenes los siguientes items:");
+console.log(valija);
